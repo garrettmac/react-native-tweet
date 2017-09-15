@@ -1,0 +1,25 @@
+{
+  "name": "react-native-tweet",
+  "version": "1.0.0",
+  "description": "React Native Tweet is the most up to date Twitter Module using **Twitter Kit 3** (without Fabric)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garrettmac/react-native-tweet.git"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "twitter",
+    "twitter-api"
+  ],
+  "author": "garrettmac <garrett@vyga.io> (http://vyga.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garrettmac/react-native-tweet/issues"
+  },
+  "homepage": "https://github.com/garrettmac/react-native-tweet#readme"
+}
