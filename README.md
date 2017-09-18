@@ -67,7 +67,23 @@ https://dev.twitter.com/twitterkit/ios/installation
 	</array>
 ```
 
+4. edit your AppDelegate
 
+> in your ios/AppDelegate.m
+
+
+```
+#import <TwitterKit/TwitterKit.h>
+
+...
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+...
+   [[Twitter sharedInstance] startWithConsumerKey:@"XXXXXXXXX" consumerSecret:@"XXXXXXXXX"];
+...
+```
 
 ### Basic Usage
 
@@ -87,7 +103,6 @@ import RNTweet from "react-native-tweet"
 
 | Methods  | Params   | Description |
 |------------------|------------------|------------------|
-| `init` | N/A | Init App |
 | `login` | N/A | Login User |
 | `logout` | N/A | Logout User |
 | `compose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
@@ -103,15 +118,9 @@ import RNTweet from "react-native-tweet"
 
 
 
-## RNTweet.init()
+## RNTwitter.compose()
 ```jsx
- RNTweet.init(TWITTER_COMSUMER_KEY, TWITTER_CONSUMER_SECRET);
-
-
-```
-## RNTweet.compose()
-```jsx
-RNTweet.compose({
+RNTwitter.compose({
 setText:"YOUR TEXT"
 setURL:"YOUR URL"
 setVideo:"YOUR VIDEO"
@@ -120,31 +129,31 @@ setImage:"YOUR IMAGE"
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTweet.logout()
+## RNTwitter.logout()
 ```jsx
-RNTweet.logout()
+RNTwitter.logout()
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTweet.user()
+## RNTwitter.user()
 ```jsx
-RNTweet.user()
+RNTwitter.user()
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTweet.retweet(tweetId)
+## RNTwitter.retweet(tweetId)
 ```jsx
-RNTweet.retweet(tweetId)
+RNTwitter.retweet(tweetId)
 .then(console.log).catch(console.warn)//optional
 ```
 
 
 
-## RNTweet.api(options)
+## RNTwitter.api(options)
 
 
 ```jsx
-RNTweet.api({
+RNTwitter.api({
     endpoint: 'search/tweets.json',
     q: encodeURI(`${q}`),
     count
