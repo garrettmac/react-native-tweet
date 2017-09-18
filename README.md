@@ -103,12 +103,13 @@ import RNTweet from "react-native-tweet"
 
 | Methods  | Params   | Description |
 |------------------|------------------|------------------|
-| `RNTweet.login` | N/A | Login User |
-| `RNTweet.logout` | N/A | Logout User |
-| `RNTweet.compose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
-| `RNTweet.user` | N/A | Get User  |
-| `RNTweet.retweet` | tweet `id` | Retweet  |
-| `RNTweet.api` | {endpoint,q}| Api User |
+| `init` | N/A | Init App |
+| `login` | N/A | Login User |
+| `logout` | N/A | Logout User |
+| `compose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
+| `user` | N/A | Get User  |
+| `retweet` | tweet `id` | Retweet  |
+| `api` | {endpoint,q}| Api User |
 
 
 
@@ -118,6 +119,12 @@ import RNTweet from "react-native-tweet"
 
 
 
+## RNTwitter.init()
+```jsx
+ RNTwitter.init(TWITTER_COMSUMER_KEY, TWITTER_CONSUMER_SECRET);
+
+
+```
 ## RNTwitter.compose()
 ```jsx
 RNTwitter.compose({
