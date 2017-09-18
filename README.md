@@ -38,6 +38,21 @@ $ npm start
 
 #### ios
 
+1. install the latest
+
+https://dev.twitter.com/twitterkit/ios/installation
+
+
+2. Drag All four to your project
+> TwitterCore.framework
+> TwitterKit.framework
+> TwitterKitResources.bundle
+> TwitterShareExtensionUIResources.bundle
+
+(Also see this repos screen shots for more details on setting up)
+
+3. add this to your `.plist`
+
 > in your ios/EXAMPLE.plist
 
 ```
@@ -51,7 +66,11 @@ $ npm start
 		</dict>
 	</array>
 ```
+
+4. edit your AppDelegate
+
 > in your ios/AppDelegate.m
+
 
 ```
 #import <TwitterKit/TwitterKit.h>
@@ -72,8 +91,6 @@ $ npm start
 
 ```jsx
 import RNTweet from "react-native-tweet"
-//or by method
-import {RNTweetLogin,RNTweetLogout,RNTweetCompose,RNTweetUser,RNTweetRetweet,RNTweetApi,} from "react-native-tweet"
 ........
 ```
 
@@ -86,12 +103,12 @@ import {RNTweetLogin,RNTweetLogout,RNTweetCompose,RNTweetUser,RNTweetRetweet,RNT
 
 | Methods  | Params   | Description |
 |------------------|------------------|------------------|
-| `RNTweet.login` / `RNTweetLogin` | N/A | Login User |
-| `RNTweet.logout` / `RNTweetLogout` | N/A | Logout User |
-| `RNTweet.compose` / `RNTweetCompose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
-| `RNTweet.user` / `RNTweetUser` | N/A | Get User  |
-| `RNTweet.retweet` / `RNTweetRetweet` | tweet `id` | Retweet  |
-| `RNTweet.api` / `RNTweetApi` | {endpoint,q}| Api User |
+| `RNTweet.login` | N/A | Login User |
+| `RNTweet.logout` | N/A | Logout User |
+| `RNTweet.compose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
+| `RNTweet.user` | N/A | Get User  |
+| `RNTweet.retweet` | tweet `id` | Retweet  |
+| `RNTweet.api` | {endpoint,q}| Api User |
 
 
 
