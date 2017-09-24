@@ -1,6 +1,6 @@
 {
   "name": "react-native-tweet",
-  "version": "1.3.9",
+  "version": "1.3.10",
   "description": "React Native Tweet is the most up to date Twitter Module using **Twitter Kit 3** (without Fabric)",
   "main": "Tweet/index.js",
   "scripts": {

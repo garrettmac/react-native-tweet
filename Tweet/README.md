@@ -39,7 +39,7 @@
 
 1. In Visual Studio add the `RNTweet.sln` in `node_modules/react-native-tweet/windows/RNTweet.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
-  - Add `using Com.Reactlibrary.RNTweet;` to the usings at the top of the file
+  - Add `using Tweet.RNTweet;` to the usings at the top of the file
   - Add `new RNTweetPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
 
