@@ -3,7 +3,9 @@
 # React Native Tweet
 
 
-React Native Tweet is the most up to date Twitter Module using **Twitter Kit 3** (without Fabric)
+React Native Tweet is the most up to date Twitter Module using **Twitter Kit 3**
+
+**NOTE:** THIS DOES NOT USE FABRIC!
 
 Currently only ios, android coming soon
 
