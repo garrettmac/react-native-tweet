@@ -77,7 +77,23 @@ https://apps.twitter.com
 
 ```
 
+4. edit your AppDelegate
 
+> in your ios/AppDelegate.m
+
+
+```
+#import <TwitterKit/TwitterKit.h>
+
+...
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+...
+   [[Twitter sharedInstance] startWithConsumerKey:@"XXXXXXXXX" consumerSecret:@"XXXXXXXXX"];
+...
+```
 
 ### Basic Usage
 
