@@ -98,12 +98,6 @@ import RNTweet from "react-native-tweet"
 
 
 
-login
-logout
-compose
-user
-retweet
-api
 
 
 | Methods  | Params   | Description |
@@ -133,6 +127,25 @@ api
 
 
 
+
+## init()
+
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+| consumerKey,consumerSecret | none | none |  |
+
+
+
+**Usage**
+
+You only need to call it once and it can be added anywhere but it's better before your `AppRegister` function.
+
+```jsx
+RNTwitter.init({consumerSecret:"",consumerKey:""})
+```
+
+
 ## hideAlerts()
 
 
@@ -155,6 +168,8 @@ You only need to call it once and it can be added anywhere but it's better befor
 ```jsx
 RNTwitter.hideAlerts()
 ```
+
+
 ## login()
 
 
