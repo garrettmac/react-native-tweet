@@ -30,23 +30,6 @@
 	<array>
 		<string>armv7</string>
 	</array>
-
-
-	<key>CFBundleURLTypes</key>
-	<array>
-	  <dict>
-	    <key>CFBundleURLSchemes</key>
-	    <array>
-	      <string>twitterkit-s16Ma7vAyMTotQYaHQ40YLAbi</string>
-	    </array>
-	  </dict>
-	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-	    <string>twitter</string>
-	    <string>twitterauth</string>
-	</array>
-
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
