@@ -98,7 +98,12 @@ import RNTweet from "react-native-tweet"
 
 
 
-
+login
+logout
+compose
+user
+retweet
+api
 
 
 | Methods  | Params   | Description |
@@ -116,9 +121,55 @@ import RNTweet from "react-native-tweet"
 
 
 
+ | Params   | Description |
+|------------------|------------------|------------------|
+| `login` | N/A | Login User |
+| `logout` | N/A | Logout User |
+| `compose` | {setText,setURL,setVideo,setImage} | Compose Tweet  |
+| `user` | N/A | Get User  |
+| `retweet` | tweet `id` | Retweet  |
+| `api` | {endpoint,q}| Api User |
 
 
-## RNTwitter.compose()
+
+
+## hideAlerts()
+
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+| none | none | String | Hide extra non-twitter alerts informing user about user state |
+
+
+<details><summary><b>Example Return Response </b></summary><hr>
+
+```json
+alerts turned off.
+```
+<hr></details>
+
+**Usage**
+
+You only need to call it once and it can be added anywhere but it's better before your `AppRegister` function.
+
+```jsx
+RNTwitter.hideAlerts()
+```
+## login()
+
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+| none | none | `` | |
+
+
+<details><summary><b>Example Return Response </b></summary><hr>
+
+```json
+```
+
+<hr></details>
+
 ```jsx
 RNTwitter.compose({
 setText:"YOUR TEXT"
@@ -129,19 +180,52 @@ setImage:"YOUR IMAGE"
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTwitter.logout()
+
+## compose()
+
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+|  |  | `` | |
+```jsx
+RNTwitter.compose({
+setText:"YOUR TEXT"
+setURL:"YOUR URL"
+setVideo:"YOUR VIDEO"
+setImage:"YOUR IMAGE"
+})
+.then(console.log).catch(console.warn)//optional
+
+```
+
+## logout()
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+|  |  | `` | |
+
 ```jsx
 RNTwitter.logout()
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTwitter.user()
+## user()
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+|  |  | `` | |
+
 ```jsx
 RNTwitter.user()
 .then(console.log).catch(console.warn)//optional
 
 ```
-## RNTwitter.retweet(tweetId)
+## retweet(tweetId)
+
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+|  |  | `` | |
 ```jsx
 RNTwitter.retweet(tweetId)
 .then(console.log).catch(console.warn)//optional
@@ -149,7 +233,12 @@ RNTwitter.retweet(tweetId)
 
 
 
-## RNTwitter.api(options)
+## api(options)
+
+| Prop  | Default  | Returns | Description |
+|--------------|--------------|--------------|--------------|
+|  |  | `` | |
+
 
 
 ```jsx

@@ -1,0 +1,7 @@
+RNTweetExample/*
+# snapshots
+.DS_Store
+node_modules
+bower_dependancies
+.tmp
+react-native-tweet/node_modules
