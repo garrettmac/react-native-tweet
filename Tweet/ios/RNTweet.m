@@ -12,7 +12,7 @@
 #import <React/RCTConvert.h>
 
 
-BOOL *_showAlerts = YES;
+BOOL _showAlerts = YES;
 
 @implementation RNTweet
 
@@ -43,8 +43,8 @@ RCT_EXPORT_METHOD(hideAlerts: (RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject)
 {
         _showAlerts = NO;
-    resolve(@"alerts turned off.")
-    
+    resolve(@"alerts turned off.");
+
 }
 
 
@@ -53,7 +53,8 @@ RCT_EXPORT_METHOD(init:(NSDictionary *)options
                   rejecter:(RCTPromiseRejectBlock)reject
                   )
 {
-[[Twitter sharedInstance] startWithConsumerKey:options["consumerKey"] consumerSecret:options["consumerSecret"]];
+[[Twitter sharedInstance] startWithConsumerKey:options[@"consumerKey"] consumerSecret:options[@"consumerSecret"]];
+
 }
 
 RCT_EXPORT_METHOD(login: (RCTPromiseResolveBlock)resolve
@@ -77,7 +78,7 @@ RCT_EXPORT_METHOD(login: (RCTPromiseResolveBlock)resolve
 
        NSString * title = [NSString stringWithFormat: @"Welcome %@", session.userName];
       UIViewController *rnView = [UIApplication sharedApplication].keyWindow.rootViewController;
-        
+
         if(_showAlerts==YES){
       UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:@"You Successfully Logged into Twitter!" preferredStyle:UIAlertControllerStyleActionSheet];
        [alert addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
@@ -109,56 +110,38 @@ RCT_EXPORT_METHOD(logout:
 //  [self.view insertSubview:_logoutTwitter atIndex:16];
 
 
-//  NSHTTPCookie *cookie;
-//  NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-//  for (cookie in [storage cookies])
-//  {
-//    NSString* domainName = [cookie domain];
-//    NSRange domainRange = [domainName rangeOfString:@"Twitter"];
-//    if(domainRange.length > 0)
-//    {
-//      [storage deleteCookie:cookie];
-//    }
-//  }
-//
-//  NSURL *url = [NSURL URLWithString:@"https://api.twitter.com"];
-//  NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:url];
-//  for (NSHTTPCookie *cookie in cookies)
-//  {
-//    [[NSHTTPCookieStorage sharedHTTPCookieStorage] deleteCookie:cookie];
-//  }
-//
-
+ TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
+  NSString *userID = store.session.userID;
     if(userID){
-        
+
     if(_showAlerts==YES){
     UIAlertController * alert = [UIAlertController
                                  alertControllerWithTitle:@"Log Out?"
                                  message:@"Are you sure you want to log out of Twitter?"
                                  preferredStyle:UIAlertControllerStyleAlert];
-    
+
     UIAlertController *yesAlert = [UIAlertController alertControllerWithTitle:@"Success!"
                                                                       message:@"You successfully logged out of Twitter!"
                                                                preferredStyle:UIAlertControllerStyleActionSheet];
     [yesAlert addAction:[UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         [yesAlert dismissViewControllerAnimated:YES completion:nil];
     }]];
-    
+
     UIAlertAction* yesButton = [UIAlertAction
                                 actionWithTitle:@"Log Out"
                                 style:UIAlertActionStyleDefault
-                                
+
                                 handler:^(UIAlertAction * action) {
                                     //Handle your yes please button action here
-                                    TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
-                                    NSString *userID = store.session.userID;
+
+
                                     [store logOutUserID:userID];
-                                    
+
                                             [rnView presentViewController:yesAlert animated:YES completion:nil];
                                             resolve(@ "User successfully logged out of Twitter");
-                               
+
                                 }];
-    
+
     UIAlertAction* noButton = [UIAlertAction
                                actionWithTitle:@"Nah!"
                                style:UIAlertActionStyleDefault
@@ -166,18 +149,16 @@ RCT_EXPORT_METHOD(logout:
                                   //  resolve(@"User dismissed logged out.");
                                    reject(@"Dismissed Popup",@"User dismissed logged out.",nil);
                                }];
-    
+
     [alert addAction:yesButton];
     [alert addAction:noButton];
-    
-    
-    
+
+
+
     [rnView presentViewController:alert animated:YES completion:nil];
-    
+
     }else{
-        
-        TWTRSessionStore *store = [[Twitter sharedInstance] sessionStore];
-        NSString *userID = store.session.userID;
+
         [store logOutUserID:userID];
     }
            reject(@"Error",@"No User Found. User must be logged in to be able to log out.",nil);
@@ -418,7 +399,7 @@ RCT_EXPORT_METHOD(retweet:(NSString * )tweetId
           NSError *jsonError;
           NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
          NSLog(@"json: %@", json);
-            
+
               if(_showAlerts==YES){
           UIAlertController * alert = [UIAlertController alertControllerWithTitle: @ "Successfully Retweeted!"
                                                                           message: @ "This retweet is now visible on your wall!"
@@ -427,10 +408,10 @@ RCT_EXPORT_METHOD(retweet:(NSString * )tweetId
           [rnView presentViewController: alert animated: YES completion: nil];
           [alert addAction: [UIAlertAction
                              actionWithTitle: @ "Dismiss" style: UIAlertActionStyleCancel handler: ^ (UIAlertAction * action) {}]];
-                  
+
               }
-            
-            
+
+
           resolve(json);
 
           NSLog(@"json: %@", json);

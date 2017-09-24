@@ -13,10 +13,10 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* RNTweetExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNTweetExampleTests.m */; };
-		0E70F0EF1F783C84001AB3E9 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E70F0EC1F783C48001AB3E9 /* TwitterCore.framework */; };
-		0E70F0F01F783CBD001AB3E9 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E70F0EB1F783C46001AB3E9 /* TwitterShareExtensionUIResources.bundle */; };
-		0E70F0F11F783CC1001AB3E9 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E70F0EA1F783C46001AB3E9 /* TwitterKitResources.bundle */; };
-		0E70F0F21F783CC4001AB3E9 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E70F0ED1F783C4D001AB3E9 /* TwitterKit.framework */; };
+		0E70F12E1F784537001AB3E9 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E70F12D1F784530001AB3E9 /* TwitterCore.framework */; };
+		0E70F12F1F784539001AB3E9 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E70F12B1F78452F001AB3E9 /* TwitterKit.framework */; };
+		0E70F1301F78453C001AB3E9 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E70F12A1F78452F001AB3E9 /* TwitterKitResources.bundle */; };
+		0E70F1311F78453F001AB3E9 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E70F12C1F784530001AB3E9 /* TwitterShareExtensionUIResources.bundle */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -40,8 +40,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* RNTweetExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RNTweetExampleTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		9F5B0C0B86FE46409DBDCB33 /* libRNTweet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E7161E46664E748EA9B184 /* libRNTweet.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		D3F14116D7C246818D75EFC2 /* libRNTweet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7201A8034E4FD4B491B288 /* libRNTweet.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,16 +87,16 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = RNTweetExample;
 		};
-		0E70F0D51F783AD2001AB3E9 /* PBXContainerItemProxy */ = {
+		0E70F1111F784129001AB3E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ADD01A681E09402E00F6D226;
 			remoteInfo = "RCTBlob-tvOS";
 		};
-		0E70F0E81F783AD8001AB3E9 /* PBXContainerItemProxy */ = {
+		0E70F1241F78412E001AB3E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7CE699983DB74759AB203507 /* RNTweet.xcodeproj */;
+			containerPortal = FB67240E6E7A454DA6A082C3 /* RNTweet.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNTweet;
@@ -267,10 +267,10 @@
 		00E356EE1AD99517003FC87E /* RNTweetExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNTweetExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* RNTweetExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTweetExampleTests.m; sourceTree = "<group>"; };
-		0E70F0EA1F783C46001AB3E9 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
-		0E70F0EB1F783C46001AB3E9 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
-		0E70F0EC1F783C48001AB3E9 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		0E70F0ED1F783C4D001AB3E9 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		0E70F12A1F78452F001AB3E9 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../../Tweet/ios/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		0E70F12B1F78452F001AB3E9 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../../Tweet/ios/TwitterKit.framework; sourceTree = "<group>"; };
+		0E70F12C1F784530001AB3E9 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterShareExtensionUIResources.bundle; path = ../../Tweet/ios/TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
+		0E70F12D1F784530001AB3E9 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../../Tweet/ios/TwitterCore.framework; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* RNTweetExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTweetExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,10 +285,10 @@
 		2D02E4901E0B4A5D006451C7 /* RNTweetExample-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RNTweetExample-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
-		7CE699983DB74759AB203507 /* RNTweet.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTweet.xcodeproj; path = "../node_modules/react-native-tweet/Tweet/ios/RNTweet.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		88E7161E46664E748EA9B184 /* libRNTweet.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTweet.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		DC7201A8034E4FD4B491B288 /* libRNTweet.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTweet.a; sourceTree = "<group>"; };
+		FB67240E6E7A454DA6A082C3 /* RNTweet.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNTweet.xcodeproj; path = "../node_modules/react-native-tweet/Tweet/ios/RNTweet.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,12 +314,12 @@
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
-				0E70F0EF1F783C84001AB3E9 /* TwitterCore.framework in Frameworks */,
-				0E70F0F21F783CC4001AB3E9 /* TwitterKit.framework in Frameworks */,
+				0E70F12E1F784537001AB3E9 /* TwitterCore.framework in Frameworks */,
+				0E70F12F1F784539001AB3E9 /* TwitterKit.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				9F5B0C0B86FE46409DBDCB33 /* libRNTweet.a in Frameworks */,
+				D3F14116D7C246818D75EFC2 /* libRNTweet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,22 +407,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0E70F0CF1F783AD1001AB3E9 /* Recovered References */ = {
+		0E70F10B1F784128001AB3E9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				0E70F0EC1F783C48001AB3E9 /* TwitterCore.framework */,
-				0E70F0ED1F783C4D001AB3E9 /* TwitterKit.framework */,
-				0E70F0EA1F783C46001AB3E9 /* TwitterKitResources.bundle */,
-				0E70F0EB1F783C46001AB3E9 /* TwitterShareExtensionUIResources.bundle */,
-				88E7161E46664E748EA9B184 /* libRNTweet.a */,
+				DC7201A8034E4FD4B491B288 /* libRNTweet.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
-		0E70F0E51F783AD6001AB3E9 /* Products */ = {
+		0E70F1211F78412C001AB3E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0E70F0E91F783AD8001AB3E9 /* libRNTweet.a */,
+				0E70F1251F78412E001AB3E9 /* libRNTweet.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,7 +503,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				7CE699983DB74759AB203507 /* RNTweet.xcodeproj */,
+				FB67240E6E7A454DA6A082C3 /* RNTweet.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -524,11 +520,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0E70F12D1F784530001AB3E9 /* TwitterCore.framework */,
+				0E70F12B1F78452F001AB3E9 /* TwitterKit.framework */,
+				0E70F12A1F78452F001AB3E9 /* TwitterKitResources.bundle */,
+				0E70F12C1F784530001AB3E9 /* TwitterShareExtensionUIResources.bundle */,
 				13B07FAE1A68108700A75B9A /* RNTweetExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNTweetExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				0E70F0CF1F783AD1001AB3E9 /* Recovered References */,
+				0E70F10B1F784128001AB3E9 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 			isa = PBXGroup;
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
-				0E70F0D61F783AD2001AB3E9 /* libRCTBlob-tvOS.a */,
+				0E70F1121F784129001AB3E9 /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -715,8 +715,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 0E70F0E51F783AD6001AB3E9 /* Products */;
-					ProjectRef = 7CE699983DB74759AB203507 /* RNTweet.xcodeproj */;
+					ProductGroup = 0E70F1211F78412C001AB3E9 /* Products */;
+					ProjectRef = FB67240E6E7A454DA6A082C3 /* RNTweet.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -765,18 +765,18 @@
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0E70F0D61F783AD2001AB3E9 /* libRCTBlob-tvOS.a */ = {
+		0E70F1121F784129001AB3E9 /* libRCTBlob-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libRCTBlob-tvOS.a";
-			remoteRef = 0E70F0D51F783AD2001AB3E9 /* PBXContainerItemProxy */;
+			remoteRef = 0E70F1111F784129001AB3E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0E70F0E91F783AD8001AB3E9 /* libRNTweet.a */ = {
+		0E70F1251F78412E001AB3E9 /* libRNTweet.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNTweet.a;
-			remoteRef = 0E70F0E81F783AD8001AB3E9 /* PBXContainerItemProxy */;
+			remoteRef = 0E70F1241F78412E001AB3E9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -940,10 +940,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E70F0F11F783CC1001AB3E9 /* TwitterKitResources.bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0E70F1301F78453C001AB3E9 /* TwitterKitResources.bundle in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				0E70F0F01F783CBD001AB3E9 /* TwitterShareExtensionUIResources.bundle in Resources */,
+				0E70F1311F78453F001AB3E9 /* TwitterShareExtensionUIResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,7 +1068,7 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = RNTweetExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1093,7 +1093,7 @@
 				COPY_PHASE_STRIP = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = RNTweetExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1117,14 +1117,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = RNTweetExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1144,14 +1139,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = RNTweetExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1180,7 +1170,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = "RNTweetExample-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1214,7 +1204,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios",
+					"$(SRCROOT)/../node_modules/react-native-tweet/Tweet/ios/**",
 				);
 				INFOPLIST_FILE = "RNTweetExample-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

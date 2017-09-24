@@ -51,20 +51,28 @@ https://dev.twitter.com/twitterkit/ios/installation
 
 (Also see this repos screen shots for more details on setting up)
 
+https://apps.twitter.com
+
 3. add this to your `.plist`
 
 > in your ios/EXAMPLE.plist
 
 ```
 <key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>twitterkit-XXXXXXXXX</string>
-			</array>
-		</dict>
-	</array>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>twitterkit-<consumerKey></string>
+    </array>
+  </dict>
+</array>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>twitter</string>
+    <string>twitterauth</string>
+</array>
+
 ```
 
 4. edit your AppDelegate
